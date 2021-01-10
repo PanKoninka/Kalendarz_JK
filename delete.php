@@ -15,7 +15,7 @@
 	{
     	$id = '"'.$_GET['id'].'"'; 
 	} 
-	$sql = "DELETE FROM events WHERE id=$id";
+	$sql = "DELETE FROM wydarzenia WHERE id=$id";
 	if ($conn->query($sql) === TRUE)
 	{
 		header('Location: index.php?month='.$miesiac.'&year='.$rok);
