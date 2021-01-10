@@ -1,5 +1,6 @@
-<?php
-class Calendar {  
+<?php /** @noinspection LossyEncoding */
+
+class Calendar {
      
     /**
      * Constructor
@@ -9,7 +10,7 @@ class Calendar {
     }
      
     /********************* PROPERTY ********************/  
-    private $dayLabels = array("Pon","Wto","Œro","Czw","Pt","Sob","Ndz");
+    private $dayLabels = array("Pon","Wto","ï¿½ro","Czw","Pt","Sob","Ndz");
      
     private $currentYear=0;
      
@@ -169,7 +170,7 @@ class Calendar {
             '<div class="header">'.
                 '<a class="prev" href="'.$this->naviHref.'?month='.sprintf('%02d',$preMonth).'&year='.$preYear.'">Poprzedni</a>'.
                     '<span class="title">'.date('Y M',strtotime($this->currentYear.'-'.$this->currentMonth.'-1')).'</span>'.
-                '<a class="next" href="'.$this->naviHref.'?month='.sprintf("%02d", $nextMonth).'&year='.$nextYear.'">Nastêpny</a>'.
+                '<a class="next" href="'.$this->naviHref.'?month='.sprintf("%02d", $nextMonth).'&year='.$nextYear.'">Nastï¿½pny</a>'.
             '</div>';
     }
          
@@ -243,7 +244,7 @@ private function _showDay($cellNumber){
 			$dbname = "kalendarz";
 			$conn = new mysqli($servername, $username, $password, $dbname);
 			$conn -> query("SET NAMES 'utf8'");
-			if ($conn -> connect_error) { die("Nie po³¹czono z baz¹ danych: " . $conn -> connect_error);}
+			if ($conn -> connect_error) { die("Nie poï¿½ï¿½czono z bazï¿½ danych: " . $conn -> connect_error);}
 			$sql = "SELECT id, dzien, miesiac, godzina, tytul, opis FROM wydarzenia WHERE dzien=$day and miesiac=$month ORDER BY godzina";
 			$result = $conn->query($sql);
 			
