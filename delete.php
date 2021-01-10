@@ -6,7 +6,7 @@
 	$servername = "localhost";
 	$username = "root";
 	$password = "root";
-	$dbname = "calendar";
+	$dbname = "kalendarz";
 	$conn = new mysqli($servername, $username, $password, $dbname);
 	$conn -> query("SET NAMES 'utf8'");
 	// delete data in mysql database 
