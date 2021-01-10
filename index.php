@@ -5,7 +5,7 @@
 <html>
 <head>   
 <link href="kalendarz.css" type="text/css" rel="stylesheet" />
-<title>Kalendarz!</title>
+<title>Kalendarz</title>
 </head>
 <body>
 
